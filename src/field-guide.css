@@ -1,0 +1,121 @@
+.field-guide {
+  min-width: 0;
+}
+.field-guide-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.field-guide-title > label {
+  display: block;
+  margin: 0;
+  font-size: inherit;
+  font-weight: 550;
+  line-height: 1.5;
+}
+.field-guide-toggle {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--info);
+  font: 600 17px/1 var(--font-display);
+  cursor: pointer;
+}
+.field-guide-toggle:hover,
+.field-guide-toggle[aria-expanded='true'] {
+  color: var(--ink);
+  border-color: var(--info);
+  background: var(--info-soft);
+}
+.field-guide-toggle:focus-visible {
+  outline: 3px solid var(--info);
+  outline-offset: 3px;
+}
+.field-guide-content {
+  margin: 12px 0 3px;
+  padding: 16px;
+  border-left: 3px solid var(--info);
+  background: var(--info-soft);
+  border-radius: 0 10px 10px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.field-guide-content[hidden] {
+  display: none;
+}
+.field-guide-content > div + div {
+  margin-top: 12px;
+}
+.field-guide-content dt {
+  color: var(--ink);
+  font-weight: 600;
+}
+.field-guide-content dd {
+  margin: 3px 0 0;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.guided-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.guided-field > :is(input, select) {
+  width: 100%;
+  min-width: 0;
+}
+.guided-field > small {
+  display: block;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 14px;
+}
+.credit-terms {
+  border-block: 1px solid var(--line);
+  margin: 24px 0;
+  padding: 16px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.credit-terms > summary {
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 550;
+}
+.credit-terms > summary:focus-visible {
+  outline: 3px solid var(--info);
+  outline-offset: 4px;
+}
+.credit-terms dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 28px;
+  margin: 20px 0 3px;
+}
+.credit-terms dt {
+  font-weight: 600;
+  color: var(--ink);
+}
+.credit-terms dd {
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+@media (max-width: 600px) {
+  .credit-terms dl {
+    grid-template-columns: 1fr;
+  }
+  .field-guide-toggle {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+}

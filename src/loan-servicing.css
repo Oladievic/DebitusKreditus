@@ -1,0 +1,324 @@
+.loan-servicing {
+  min-width: 0;
+  padding: clamp(18px, 3vw, 30px);
+}
+.loan-servicing .section-head {
+  gap: 16px;
+  align-items: flex-start;
+}
+.loan-servicing h3 {
+  font-size: clamp(20px, 2vw, 26px);
+  margin: 0 0 12px;
+}
+.loan-servicing p,
+.loan-servicing small,
+.loan-servicing label {
+  line-height: 1.65;
+}
+.servicing-model-note {
+  max-width: 75ch;
+  color: var(--muted);
+}
+.servicing-position {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 28px;
+  padding: 26px 0;
+  border-block: 1px solid var(--line);
+  margin-top: 24px;
+}
+.servicing-position > div > span {
+  color: var(--muted);
+  font-size: 14px;
+}
+.servicing-position strong {
+  display: block;
+  font-size: clamp(29px, 3.6vw, 48px);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  margin-top: 8px;
+  overflow-wrap: anywhere;
+}
+.servicing-progress [role='progressbar'] {
+  height: 10px;
+  border-radius: 4px;
+  background: var(--line);
+  overflow: hidden;
+  margin: 14px 0 8px;
+}
+.servicing-progress i {
+  display: block;
+  height: 100%;
+  background: #ef3124;
+  transition: width 0.4s ease;
+}
+.servicing-progress small {
+  color: var(--muted);
+}
+.servicing-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+.servicing-facts dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+.servicing-facts dd {
+  margin: 7px 0 0;
+  font-size: 18px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.servicing-next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  padding: 24px;
+  background: var(--info-soft);
+  border-radius: 18px;
+}
+.servicing-next-amount {
+  font-size: clamp(27px, 3vw, 38px);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+.servicing-next p {
+  margin-bottom: 6px;
+}
+.servicing-next small {
+  color: var(--muted);
+}
+.servicing-record {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+}
+.servicing-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+}
+.servicing-check input {
+  flex: 0 0 auto;
+  width: 19px;
+  height: 19px;
+  margin-top: 3px;
+  accent-color: #ef3124;
+}
+.servicing-prepayment {
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding-top: 28px;
+}
+.servicing-prepayment > p {
+  color: var(--muted);
+  max-width: 76ch;
+}
+.servicing-prepayment-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: end;
+}
+.servicing-prepayment-fields label {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  font-size: 14px;
+}
+.servicing-prepayment-fields input,
+.servicing-prepayment-fields select {
+  width: 100%;
+  min-width: 0;
+}
+.servicing-prepayment-fields button {
+  grid-column: 1/-1;
+  justify-self: start;
+}
+.servicing-preview {
+  margin-top: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+}
+.servicing-preview h4 {
+  font-size: 20px;
+  margin: 0 0 18px;
+}
+.servicing-preview dl {
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+.servicing-preview dl > div {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.servicing-preview dt {
+  color: var(--muted);
+}
+.servicing-preview dd {
+  margin: 0;
+  font-weight: 600;
+}
+.servicing-preview dd span {
+  color: var(--muted);
+  font-weight: 400;
+}
+.servicing-preview > p {
+  color: var(--muted);
+  font-size: 14px;
+}
+.servicing-preview > button {
+  margin-top: 18px;
+}
+.servicing-calendar,
+.servicing-history,
+.servicing-assumptions {
+  margin-top: 26px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.loan-servicing summary {
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 550;
+  line-height: 1.6;
+}
+.loan-servicing summary span {
+  color: var(--muted);
+  margin-left: 10px;
+  font-weight: 400;
+}
+.servicing-calendar ol,
+.servicing-history ol {
+  padding: 0;
+  list-style: none;
+  margin: 16px 0 0;
+}
+.servicing-calendar li {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  padding: 16px 0;
+}
+.servicing-calendar li > div {
+  display: grid;
+  gap: 4px;
+}
+.servicing-calendar li > div span {
+  color: var(--muted);
+  font-size: 13px;
+}
+.servicing-calendar time {
+  font-size: 14px;
+}
+.servicing-calendar small {
+  color: var(--muted);
+  font-size: 13px;
+}
+.servicing-history li {
+  border-top: 1px solid var(--line);
+  padding: 18px 0;
+}
+.servicing-history p {
+  margin: 5px 0;
+}
+.servicing-history small,
+.servicing-assumptions {
+  color: var(--muted);
+  font-size: 14px;
+}
+.servicing-assumptions ul {
+  padding-left: 20px;
+}
+.servicing-assumptions li {
+  margin: 10px 0;
+  line-height: 1.7;
+}
+.servicing-notice {
+  background: var(--info-soft);
+  padding: 16px;
+  border-radius: 12px;
+}
+.servicing-error {
+  padding: 16px;
+  border: 1px solid var(--danger, #bf2e25);
+  border-radius: 12px;
+}
+.loan-servicing button {
+  max-width: 100%;
+  white-space: normal;
+  line-height: 1.45;
+}
+.loan-servicing :focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .loan-servicing .section-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .loan-servicing .section-head h2 {
+    font-size: 24px;
+  }
+  .servicing-position,
+  .servicing-next {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .servicing-facts {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .servicing-facts > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 18px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .servicing-facts dd {
+    margin: 0;
+  }
+  .servicing-next,
+  .servicing-preview {
+    padding: 18px;
+  }
+  .servicing-prepayment-fields {
+    grid-template-columns: 1fr;
+  }
+  .servicing-calendar li {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .servicing-calendar li > strong {
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+  .servicing-calendar li > small:last-child {
+    text-align: right;
+  }
+  .servicing-history strong,
+  .servicing-history small {
+    overflow-wrap: anywhere;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .servicing-progress i {
+    transition: none;
+  }
+}
+:root[data-motion='reduced'] .servicing-progress i {
+  transition: none;
+}

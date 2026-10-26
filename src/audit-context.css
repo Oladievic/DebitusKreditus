@@ -1,0 +1,57 @@
+.audit-event-context {
+  margin-top: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+.audit-event-context summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.audit-event-context p {
+  margin: 12px 0;
+}
+.audit-event-context .audit-event-versions,
+.audit-event-context .audit-event-note {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.audit-event-values {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 20px;
+  margin: 16px 0;
+}
+.audit-event-values dt {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.audit-event-values dd {
+  margin: 4px 0 0;
+  font-weight: 600;
+}
+.audit-event-context ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+.audit-event-context li + li {
+  margin-top: 9px;
+}
+.timeline .audit-event-context ul > li {
+  display: list-item;
+  position: static;
+  padding: 0;
+}
+.timeline .audit-event-context ul > li::before {
+  content: none;
+}
+.audit-event-score small {
+  display: block;
+  margin-top: 3px;
+}
+@media (max-width: 580px) {
+  .audit-event-values {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,179 @@
+.financing-navigator {
+  padding: clamp(20px, 3vw, 36px);
+  margin-bottom: 30px;
+  min-width: 0;
+}
+.navigator-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.navigator-heading h2 {
+  font: 520 clamp(25px, 2.8vw, 36px)/1.2 var(--font-display);
+  margin: 0 0 10px;
+}
+.navigator-heading p {
+  color: var(--muted);
+  max-width: 65ch;
+  margin: 0;
+  line-height: 1.65;
+}
+.navigator-sign {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ef3124;
+  color: #ef3124;
+  border-radius: 50%;
+  font-size: 38px;
+  flex: 0 0 auto;
+}
+.financing-navigator > label,
+.navigator-review > label {
+  display: block;
+  margin-bottom: 9px;
+}
+.financing-navigator textarea {
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 9px 0 16px;
+  min-width: 0;
+}
+.navigator-request-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+}
+.navigator-request-actions small {
+  color: var(--muted);
+}
+.navigator-review {
+  border-top: 1px solid var(--line);
+  margin-top: 26px;
+  padding-top: 24px;
+}
+.navigator-review h3 {
+  font-size: 23px;
+  margin-bottom: 18px;
+}
+.navigator-fields {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 18px;
+  margin: 22px 0;
+}
+.navigator-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.navigator-fields select,
+.navigator-fields input {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  font-size: 18px;
+}
+.navigator-fields small {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.navigator-questions {
+  padding: 15px 20px 15px 36px;
+  background: var(--amber-soft);
+  border-radius: 12px;
+}
+.navigator-questions li + li {
+  margin-top: 9px;
+}
+.navigator-product-context {
+  max-width: 75ch;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+.navigator-reasons {
+  margin: 18px 0;
+}
+.navigator-reasons p {
+  margin: 12px 0;
+  font-size: 14px;
+}
+.navigator-notice {
+  padding: 13px 16px;
+  margin: 20px 0 0;
+  background: var(--info-soft);
+  color: var(--ink);
+  border-radius: 10px;
+  font-size: 14px;
+}
+.navigator-prepared {
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 2px solid var(--line);
+}
+.navigator-ready-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green);
+}
+.navigator-prepared dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 20px 0;
+}
+.navigator-prepared dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+.navigator-prepared dd {
+  margin: 8px 0 0;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+.navigator-prepared p {
+  font-size: 14px;
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+.navigator-prepared .check-row {
+  margin: 20px 0;
+}
+@media (max-width: 700px) {
+  .navigator-fields {
+    grid-template-columns: 1fr;
+  }
+  .navigator-prepared dl {
+    grid-template-columns: 1fr;
+  }
+  .navigator-prepared dl > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14px;
+  }
+  .navigator-prepared dd {
+    text-align: right;
+  }
+  .navigator-sign {
+    display: none;
+  }
+  .financing-navigator textarea {
+    font-size: 16px;
+  }
+  .financing-navigator .button {
+    max-width: 100%;
+    white-space: normal;
+  }
+}

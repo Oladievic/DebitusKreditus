@@ -1,0 +1,65 @@
+.loan-summary {
+  min-width: 0;
+  margin-block: 26px;
+  border-top: 3px solid #ef3124;
+}
+.modal:has(.loan-summary) {
+  width: 780px;
+}
+.loan-summary-heading {
+  padding-block: 23px 20px;
+}
+.loan-summary-heading h3 {
+  margin: 0 0 8px;
+  font: 520 clamp(23px, 2.2vw, 30px) / 1.25 var(--font-display);
+}
+.loan-summary-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.loan-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 0;
+}
+.loan-summary-item {
+  min-width: 0;
+  border-top: 1px solid var(--line);
+  padding-block: 23px 25px;
+  overflow-wrap: anywhere;
+}
+.loan-summary-item dt {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.loan-summary-item dd {
+  margin: 10px 0 0;
+}
+.loan-summary-item strong {
+  display: block;
+  font: 500 clamp(19px, 1.8vw, 23px) / 1.4 var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
+.loan-summary-item:is(.loan-summary-amount, .loan-summary-payment, .loan-summary-cost) strong {
+  font-size: clamp(26px, 2.8vw, 34px);
+  letter-spacing: -0.025em;
+}
+.loan-summary-item p {
+  margin: 12px 0 0;
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+@media (max-width: 580px) {
+  .loan-summary-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .loan-summary-item {
+    padding-block: 20px 22px;
+  }
+}

@@ -1,0 +1,2369 @@
+@media (min-width: 1600px) {
+  .workspace {
+    padding: 40px 52px 0;
+  }
+  .topbar {
+    padding: 0 52px;
+  }
+  .overview-top,
+  .overview-middle {
+    grid-template-columns: minmax(0, 2.1fr) minmax(300px, 1fr);
+  }
+  .route-hero {
+    min-height: 320px;
+    padding: 28px 32px 23px;
+  }
+  .hero-content h2 {
+    font-size: 32px;
+    max-width: 440px;
+  }
+  .hero-content p {
+    font-size: 14px;
+    max-width: 360px;
+  }
+  .hero-action .button {
+    font-size: 13px;
+    padding: 12px 16px;
+  }
+  .route-emblem {
+    right: 20px;
+    transform: scale(1.2);
+    top: 0;
+  }
+  .hero-amount {
+    font-size: 20px;
+  }
+  .feed-card {
+    padding: 24px;
+  }
+  .feed-card h3 {
+    font-size: 15px;
+  }
+  .feed-card > p {
+    font-size: 13px;
+  }
+  .feed-meta {
+    font-size: 13px;
+  }
+  .feed-card > .text-link {
+    font-size: 13px;
+  }
+  .stats-strip strong {
+    font-size: 24px;
+  }
+  .stats-strip div > div > span {
+    font-size: 13px;
+  }
+  .business-balance {
+    padding: 28px 27px 0;
+  }
+  .balance-title {
+    font-size: 15px;
+  }
+  .balance-label {
+    font-size: 13px;
+  }
+  .business-balance > strong {
+    font-size: 36px;
+  }
+  .balance-detail {
+    font-size: 13px;
+  }
+  .balance-link {
+    font-size: 13px;
+  }
+  .balance-legend {
+    font-size: 13px;
+  }
+  .application-name b {
+    font-size: 14px;
+  }
+  .application-name > span {
+    font-size: 13px;
+  }
+  .application-row-amount b {
+    font-size: 15px;
+  }
+  .application-row-amount > span {
+    font-size: 13px;
+  }
+  .application-row .badge {
+    font-size: 13px;
+  }
+  .next-action h3 {
+    font-size: 21px;
+  }
+  .next-action p {
+    font-size: 13px;
+    max-width: 270px;
+  }
+  .next-action .text-link {
+    font-size: 13px;
+  }
+  .next-action {
+    padding: 25px 28px;
+  }
+  .page-head h1 {
+    font-size: 35px;
+  }
+  .page-head p {
+    font-size: 15px;
+  }
+  .workspace-footer {
+    font-size: 13px;
+  }
+  .section-head h2 {
+    font-size: 19px;
+  }
+  .action-banner b {
+    font-size: 14px;
+  }
+  .action-banner p {
+    font-size: 13px;
+  }
+  .action-banner .button {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1200px) {
+  :root {
+    --sidebar: 218px;
+  }
+  .sidebar {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .sidebar-brand {
+    padding: 0 4px;
+  }
+  .brand {
+    gap: 8px;
+  }
+  .brand > span:last-child:not(.brand-mark) {
+    font-size: 14px;
+  }
+  .brand-mark {
+    width: 32px;
+    height: 34px;
+    font-size: 21px;
+  }
+  .nav-item {
+    font-size: 13px;
+    padding: 12px 10px;
+    gap: 9px;
+  }
+  .nav-item.active:before {
+    left: -13px;
+  }
+  .workspace {
+    padding: 27px 25px 0;
+  }
+  .topbar {
+    padding: 0 25px;
+  }
+  .hero-content h2 {
+    font-size: 24px;
+    max-width: 280px;
+  }
+  .route-hero {
+    padding: 22px;
+  }
+  .overview-top,
+  .overview-middle {
+    grid-template-columns: minmax(0, 1.65fr) minmax(230px, 1fr);
+    gap: 18px;
+  }
+  .route-emblem {
+    right: -37px;
+    transform: scale(0.8);
+    opacity: 0.55;
+  }
+  .hero-content > div:first-child {
+    max-width: 95%;
+  }
+  .hero-action {
+    gap: 14px;
+  }
+  .hero-amount {
+    font-size: 14px;
+  }
+  .business-balance {
+    padding: 22px 19px 0;
+  }
+  .business-balance > strong {
+    font-size: 28px;
+  }
+  .balance-title {
+    font-size: 13px;
+  }
+  .balance-legend {
+    font-size: 7px;
+  }
+  .stats-strip > div {
+    padding: 0 13px;
+    gap: 8px;
+  }
+  .stats-strip strong {
+    font-size: 17px;
+  }
+  .stats-strip div > div > span {
+    font-size: 8px;
+  }
+  .stat-icon svg {
+    width: 16px;
+  }
+  .application-surface {
+    padding: 20px 16px 6px;
+  }
+  .application-row {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .application-row .badge {
+    margin-left: 46px;
+    order: 6;
+  }
+  .application-row > .application-icon {
+    width: 34px;
+  }
+  .application-row > svg {
+    margin-left: auto;
+  }
+  .application-row-amount {
+    margin-right: 0;
+  }
+  .next-action {
+    padding: 20px;
+  }
+  .feed-grid {
+    gap: 14px;
+  }
+  .feed-card {
+    padding: 17px;
+  }
+  .feed-meta {
+    font-size: 8px;
+  }
+  .feed-card h3 {
+    font-size: 13px;
+  }
+  .product-intro {
+    padding: 25px;
+  }
+  .product-intro-steps {
+    display: none;
+  }
+  .products-grid {
+    gap: 15px;
+  }
+  .product-card {
+    padding: 20px;
+  }
+  .product-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+  .product-card h2 {
+    font-size: 18px;
+  }
+  .product-terms div {
+    font-size: 13px;
+  }
+  .wizard-layout {
+    grid-template-columns: minmax(0, 1fr) 230px;
+    gap: 22px;
+  }
+  .wizard {
+    padding: 24px;
+  }
+  .wizard-steps {
+    gap: 12px;
+  }
+  .wizard-steps li {
+    font-size: 13px;
+    gap: 6px;
+  }
+  .detail-layout {
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 20px;
+  }
+  .detail-section,
+  .bank-decision,
+  .decision-card {
+    padding: 21px;
+  }
+  .detail-amounts {
+    gap: 12px;
+  }
+  .detail-amounts strong {
+    font-size: 21px;
+  }
+  .detail-amounts span {
+    font-size: 13px;
+  }
+  .passport {
+    padding: 20px;
+  }
+  .document-add {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .document-request b {
+    font-size: 13px;
+  }
+  .document-request {
+    gap: 9px;
+  }
+  .simulator-controls,
+  .scenario-result {
+    padding: 24px;
+  }
+  .simulator-grid {
+    gap: 20px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(270px, 1fr);
+  }
+  .range-title {
+    gap: 10px;
+  }
+  .range-value input {
+    width: 110px;
+    font-size: 20px;
+  }
+  .stress-options > button {
+    font-size: 8px;
+    padding: 9px 7px;
+  }
+  .stress-test {
+    padding: 15px;
+  }
+  .compare-scenario .button {
+    white-space: normal;
+  }
+  .bank-overview {
+    gap: 15px;
+  }
+  .bank-overview > div {
+    padding: 20px;
+    gap: 13px;
+  }
+  .bank-overview > div > span:last-child {
+    font-size: 13px;
+  }
+  .legal-layout {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 20px;
+  }
+  .legal-content {
+    padding: 28px;
+  }
+  .integration-card {
+    padding: 23px;
+  }
+  .settings-section {
+    padding: 23px;
+  }
+  .api-hero {
+    padding: 24px;
+    flex-wrap: wrap;
+  }
+  .api-hero > .button {
+    margin-left: 66px;
+  }
+  .api-hero > div {
+    min-width: 250px;
+  }
+  .login-story {
+    padding: 35px;
+  }
+  .login-form {
+    padding: 35px;
+  }
+  .login-route {
+    gap: 7px;
+  }
+  .login-route > i {
+    width: 20px;
+  }
+  .login-route b {
+    font-size: 13px;
+  }
+  .login-route small {
+    font-size: 8px;
+  }
+}
+@media (max-width: 1020px) {
+  .workspace {
+    padding: 25px 22px 0;
+  }
+  .page-head h1 {
+    font-size: 25px;
+  }
+  .page-head {
+    gap: 15px;
+  }
+  .page-head p {
+    font-size: 13px;
+  }
+  .page-head .button {
+    font-size: 13px;
+    padding: 11px 13px;
+  }
+  .overview-top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .route-hero {
+    min-height: 290px;
+  }
+  .hero-content h2 {
+    max-width: 390px;
+    font-size: 29px;
+  }
+  .hero-content p {
+    font-size: 13px;
+    max-width: 370px;
+  }
+  .route-emblem {
+    right: 10px;
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .hero-content > div:first-child {
+    max-width: 78%;
+  }
+  .hero-amount {
+    font-size: 17px;
+  }
+  .business-balance {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0 30px;
+    padding: 22px;
+  }
+  .balance-title {
+    grid-column: 1;
+    font-size: 13px;
+  }
+  .balance-label {
+    grid-column: 1;
+    margin-top: 16px;
+  }
+  .business-balance > strong {
+    grid-column: 1;
+    font-size: 30px;
+    grid-row: 3 / span 2;
+  }
+  .balance-bar {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 13px 0 8px;
+  }
+  .balance-legend {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 8px;
+    margin: 0 0 6px;
+  }
+  .balance-detail {
+    grid-column: 2;
+    margin: 8px 0;
+  }
+  .balance-link {
+    grid-column: span 2;
+    margin-top: 17px;
+    padding-bottom: 0;
+  }
+  .stats-strip {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    margin-bottom: 22px;
+  }
+  .stats-strip > div {
+    padding: 19px 22px;
+  }
+  .stats-strip > div:nth-child(2) {
+    border-right: 0;
+  }
+  .stats-strip > div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+  .stats-strip strong {
+    font-size: 20px;
+  }
+  .stats-strip div > div > span {
+    font-size: 13px;
+  }
+  .overview-middle {
+    grid-template-columns: 1fr;
+  }
+  .application-row {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+  .application-row .badge {
+    margin-left: 0;
+    order: initial;
+    font-size: 13px;
+  }
+  .application-name b {
+    font-size: 13px;
+  }
+  .application-row-amount b {
+    font-size: 13px;
+  }
+  .next-action {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    column-gap: 14px;
+    padding: 20px;
+  }
+  .next-action .icon-tile {
+    grid-row: span 3;
+    margin: 2px 0;
+  }
+  .next-action h3 {
+    margin: 0 0 5px;
+  }
+  .next-action p {
+    max-width: 90%;
+    font-size: 13px;
+    margin: 0 0 9px;
+  }
+  .next-action .text-link {
+    font-size: 13px;
+  }
+  .mini-sliders {
+    display: none;
+  }
+  .feed-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .news-section .feed-card:last-child {
+    display: none;
+  }
+  .full-feed .feed-card:last-child {
+    display: flex;
+  }
+  .action-banner {
+    padding: 15px;
+  }
+  .application-cards {
+    grid-template-columns: 1fr;
+  }
+  .application-card h2 {
+    font-size: 19px;
+  }
+  .application-card .route-track {
+    margin-top: 25px;
+  }
+  .application-figures strong {
+    font-size: 23px;
+  }
+  .application-card-head .badge {
+    font-size: 13px;
+  }
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    column-gap: 30px;
+    padding: 26px;
+  }
+  .product-card-top {
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  .product-card h2 {
+    grid-column: 1;
+    font-size: 22px;
+  }
+  .product-card > p {
+    grid-column: 1;
+    min-height: 0;
+    font-size: 13px;
+    margin: 0;
+  }
+  .product-terms {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    margin: 0;
+  }
+  .product-purposes {
+    grid-column: 1;
+    margin: 20px 0 0;
+  }
+  .product-card > .button {
+    grid-column: 2;
+    margin-top: 20px;
+    align-self: end;
+  }
+  .wizard-layout {
+    grid-template-columns: 1fr;
+  }
+  .wizard-aside {
+    display: none;
+  }
+  .wizard {
+    padding: 30px;
+  }
+  .wizard-steps li {
+    font-size: 13px;
+  }
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .detail-aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  .context-help {
+    grid-column: span 2;
+  }
+  .passport {
+    padding: 24px;
+  }
+  .checks-panel {
+    padding: 24px;
+  }
+  .detail-amounts strong {
+    font-size: 26px;
+  }
+  .detail-section,
+  .bank-decision,
+  .decision-card {
+    padding: 25px;
+  }
+  .document-request b {
+    font-size: 13px;
+  }
+  .document-request div > span {
+    font-size: 13px;
+  }
+  .document-add .button {
+    font-size: 13px;
+  }
+  .document-request {
+    gap: 14px;
+  }
+  .simulator-grid {
+    grid-template-columns: 1fr;
+  }
+  .simulator-controls {
+    padding: 27px;
+  }
+  .scenario-result {
+    padding: 27px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+  }
+  .result-heading {
+    grid-column: 1;
+  }
+  .payment-number {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 39px;
+  }
+  .cash-gauge {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 15px;
+  }
+  .affordability {
+    grid-column: span 2;
+    grid-row: 4;
+  }
+  .result-breakdown {
+    grid-column: span 2;
+    margin: 0 0 20px;
+  }
+  .scenario-result > .button,
+  .result-note {
+    grid-column: span 2;
+  }
+  .scenario-result > .inline-alert {
+    grid-column: span 2;
+  }
+  .compare-scenario {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .compare-scenario > div {
+    min-width: 75%;
+  }
+  .compare-scenario > .button {
+    margin-left: 57px;
+  }
+  .bank-overview {
+    gap: 12px;
+  }
+  .bank-overview > div {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+  }
+  .bank-overview strong {
+    font-size: 26px;
+  }
+  .bank-overview .icon-tile {
+    width: 33px;
+    height: 33px;
+    border-radius: 9px;
+  }
+  .settings-grid {
+    gap: 18px;
+  }
+  .settings-section {
+    padding: 20px;
+  }
+  .settings-section h2 {
+    font-size: 18px;
+  }
+  .profile-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile-summary h3 {
+    font-size: 15px;
+  }
+  .theme-options {
+    gap: 8px;
+  }
+  .theme-option {
+    padding: 7px;
+  }
+  .theme-option > span:last-child {
+    font-size: 13px;
+    gap: 4px;
+  }
+  .theme-option > span:last-child > svg {
+    width: 12px;
+  }
+  .accent-option {
+    font-size: 13px;
+    padding: 7px;
+  }
+  .integration-grid {
+    grid-template-columns: 1fr;
+  }
+  .integration-tip {
+    grid-column: 1;
+    padding: 15px;
+  }
+  .integration-card {
+    padding: 27px;
+  }
+  .integration-card > .button-row {
+    margin-top: 18px;
+  }
+  .legal-layout {
+    grid-template-columns: 1fr;
+  }
+  .legal-nav {
+    flex-direction: row;
+    overflow: auto;
+    gap: 8px;
+  }
+  .legal-nav button {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  .legal-nav button svg {
+    display: none;
+  }
+  .document-banner {
+    flex-wrap: wrap;
+    padding: 24px;
+  }
+  .document-banner > div {
+    min-width: 75%;
+  }
+  .document-banner > .button {
+    margin-left: 63px;
+  }
+  .feed-explanation {
+    flex-wrap: wrap;
+    padding: 24px;
+  }
+  .feed-explanation > div {
+    min-width: 75%;
+  }
+  .feed-explanation > .badge {
+    margin-left: 63px;
+  }
+  .login-page {
+    grid-template-columns: 0.9fr 1fr;
+  }
+  .login-story {
+    padding: 30px;
+  }
+  .login-form {
+    padding: 30px;
+  }
+  .login-story h1 {
+    font-size: 38px;
+    letter-spacing: -1.8px;
+  }
+  .login-story-content > p {
+    font-size: 13px;
+  }
+  .login-route {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 35px;
+  }
+  .login-route > div {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    column-gap: 13px;
+    align-items: center;
+  }
+  .login-route > div > span {
+    width: 36px;
+    height: 36px;
+    grid-row: span 2;
+    border-radius: 10px;
+    margin: 0;
+  }
+  .login-route > div > span svg {
+    width: 18px;
+  }
+  .login-route b {
+    font-size: 13px;
+  }
+  .login-route small {
+    font-size: 13px;
+    margin: 4px 0 0;
+  }
+  .login-route > i {
+    display: none;
+  }
+  .login-foot {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .login-form h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 800px) {
+  :root {
+    --sidebar: 240px;
+  }
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    padding: 25px 17px 0;
+    width: 240px;
+    z-index: 80;
+  }
+  .nav-open .sidebar {
+    transform: translateX(0);
+  }
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #15264b77;
+    z-index: 70;
+    backdrop-filter: blur(3px);
+  }
+  .sidebar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 5px;
+  }
+  .mobile-close {
+    display: flex !important;
+    width: 25px;
+  }
+  .sidebar .brand > span:last-child {
+    font-size: 15px;
+  }
+  .nav-item {
+    font-size: 13px;
+    padding: 13px 12px;
+  }
+  .nav-item.active:before {
+    left: -17px;
+  }
+  .main-shell {
+    margin-left: 0;
+  }
+  .menu-button {
+    display: flex !important;
+  }
+  .topbar {
+    height: 65px;
+    padding: 0 21px;
+    gap: 17px;
+  }
+  .search-trigger {
+    flex: 1;
+    font-size: 13px;
+  }
+  .search-trigger kbd {
+    display: none;
+  }
+  .topbar-actions {
+    gap: 13px;
+  }
+  .environment-pill {
+    font-size: 13px;
+  }
+  .workspace {
+    padding: 26px 25px 0;
+    min-height: calc(100vh - 65px);
+  }
+  .page-head h1 {
+    font-size: 27px;
+  }
+  .page-head p {
+    font-size: 13px;
+  }
+  .page-head .button {
+    font-size: 13px;
+    padding: 12px 15px;
+  }
+  .overview-top {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 16px;
+  }
+  .hero-content h2 {
+    font-size: 24px;
+    max-width: 280px;
+  }
+  .hero-content p {
+    font-size: 13px;
+    max-width: 250px;
+  }
+  .route-emblem {
+    right: -42px;
+    transform: scale(0.65);
+    opacity: 0.3;
+  }
+  .hero-content > div:first-child {
+    max-width: 100%;
+  }
+  .hero-action {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .hero-amount {
+    font-size: 14px;
+  }
+  .business-balance {
+    display: block;
+    padding: 22px 18px 0;
+  }
+  .business-balance > strong {
+    font-size: 26px;
+  }
+  .balance-title {
+    font-size: 13px;
+  }
+  .balance-title .icon-tile {
+    width: 28px;
+    height: 28px;
+  }
+  .balance-title .icon-tile svg {
+    width: 17px;
+  }
+  .balance-label {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .balance-bar {
+    margin: 16px 0 11px;
+  }
+  .balance-legend {
+    font-size: 7px;
+    margin-bottom: 18px;
+  }
+  .balance-detail {
+    font-size: 13px;
+    margin: 10px 0;
+  }
+  .balance-link {
+    font-size: 13px;
+    padding: 13px 0;
+  }
+  .route-track.large li {
+    font-size: 8px;
+  }
+  .route-track.large {
+    margin-top: 19px;
+  }
+  .hero-top {
+    font-size: 13px;
+  }
+  .hero-number {
+    font-size: 8px;
+  }
+  .stats-strip {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 18px 0;
+  }
+  .stats-strip > div {
+    padding: 0 13px;
+    gap: 9px;
+  }
+  .stats-strip > div:nth-child(-n + 2) {
+    border-bottom: 0;
+  }
+  .stats-strip > div:nth-child(2) {
+    border-right: 1px solid var(--line);
+  }
+  .stats-strip strong {
+    font-size: 18px;
+  }
+  .stats-strip div > div > span {
+    font-size: 8px;
+    white-space: normal;
+  }
+  .stat-icon {
+    display: none;
+  }
+  .toast {
+    left: 50%;
+  }
+  .application-row {
+    padding: 20px 0;
+  }
+  .application-name b {
+    font-size: 13px;
+  }
+  .application-name > span {
+    font-size: 13px;
+  }
+  .application-row-amount b {
+    font-size: 14px;
+  }
+  .application-row-amount > span {
+    font-size: 13px;
+  }
+  .application-row .badge {
+    font-size: 13px;
+  }
+  .feed-card {
+    padding: 21px;
+  }
+  .feed-card h3 {
+    font-size: 15px;
+  }
+  .feed-card > p {
+    font-size: 13px;
+  }
+  .feed-meta {
+    font-size: 13px;
+  }
+  .feed-card > .text-link {
+    font-size: 13px;
+  }
+  .section-head h2 {
+    font-size: 18px;
+  }
+  .action-banner b {
+    font-size: 13px;
+  }
+  .action-banner p {
+    font-size: 13px;
+  }
+  .settings-section {
+    padding: 25px;
+  }
+  .profile-summary {
+    flex-direction: row;
+    align-items: center;
+  }
+  .profile-summary .avatar {
+    width: 45px;
+    height: 45px;
+  }
+  .profile-summary h3 {
+    font-size: 14px;
+  }
+  .theme-option > span:last-child {
+    font-size: 13px;
+  }
+  .settings-grid .detail-data > div {
+    font-size: 13px;
+    gap: 15px;
+  }
+  .settings-section .section-description {
+    font-size: 13px;
+  }
+  .workspace-footer {
+    font-size: 13px;
+    margin-top: 32px;
+  }
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+  .login-story {
+    min-height: 0;
+    padding: 25px 30px 30px;
+  }
+  .login-story-content {
+    padding: 40px 0 0;
+  }
+  .login-story h1 {
+    font-size: 38px;
+    margin-bottom: 18px;
+  }
+  .login-story .brand > span:last-child {
+    font-size: 16px;
+  }
+  .login-story .brand small {
+    font-size: 13px;
+  }
+  .login-story-content > p {
+    margin: 0;
+    font-size: 13px;
+  }
+  .login-tag {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .login-route,
+  .login-foot {
+    display: none;
+  }
+  .login-form {
+    padding: 38px 30px;
+  }
+  .login-form-inner {
+    max-width: 480px;
+  }
+  .login-form h2 {
+    font-size: 27px;
+  }
+  .demo-label {
+    margin-bottom: 19px;
+  }
+  .login-intro {
+    font-size: 13px;
+  }
+  .demo-account b {
+    font-size: 14px;
+  }
+  .demo-account small {
+    font-size: 13px;
+  }
+  .segmented button {
+    font-size: 13px;
+  }
+  .login-notice p {
+    font-size: 13px;
+  }
+  .login-legal {
+    font-size: 13px;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+  .workspace {
+    padding: 23px 18px 0;
+  }
+  .topbar {
+    padding: 0 16px;
+    gap: 10px;
+  }
+  .topbar-actions {
+    gap: 9px;
+  }
+  .topbar-profile > svg {
+    display: none;
+  }
+  .environment-pill {
+    font-size: 8px;
+    padding: 5px 8px;
+  }
+  .search-trigger {
+    font-size: 13px;
+    gap: 7px;
+  }
+  .search-trigger > svg {
+    width: 17px;
+  }
+  .notification-button {
+    padding-right: 9px;
+    width: 29px;
+  }
+  .topbar-profile > .avatar {
+    width: 26px;
+    height: 26px;
+  }
+  .page-head {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 17px;
+    margin-bottom: 23px;
+  }
+  .page-head h1 {
+    font-size: 25px;
+    letter-spacing: -1px;
+  }
+  .page-head p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .page-head > .button {
+    font-size: 13px;
+    min-height: 40px;
+  }
+  .overview-top {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .route-hero {
+    padding: 24px 23px 20px;
+    min-height: 291px;
+  }
+  .hero-content h2 {
+    font-size: 26px;
+    max-width: 290px;
+    letter-spacing: -1px;
+  }
+  .hero-content p {
+    font-size: 13px;
+    max-width: 260px;
+  }
+  .hero-content > div:first-child {
+    max-width: 90%;
+  }
+  .route-emblem {
+    right: -29px;
+    transform: scale(0.85);
+    opacity: 0.4;
+    top: -9px;
+  }
+  .hero-top {
+    font-size: 13px;
+  }
+  .hero-number {
+    font-size: 8px;
+  }
+  .hero-action {
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+  .hero-action .button {
+    font-size: 13px;
+  }
+  .hero-amount {
+    font-size: 15px;
+  }
+  .route-track.large li {
+    font-size: 13px;
+  }
+  .route-track.large {
+    margin-top: 25px;
+  }
+  .business-balance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+    padding: 21px;
+  }
+  .balance-title {
+    font-size: 13px;
+    grid-column: span 2;
+  }
+  .balance-title a {
+    margin-left: auto;
+  }
+  .balance-label {
+    font-size: 13px;
+    grid-column: 1;
+    grid-row: 2;
+    margin: 19px 0 7px;
+  }
+  .business-balance > strong {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: start;
+    font-size: 27px;
+  }
+  .balance-bar {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 25px 0 9px;
+  }
+  .balance-legend {
+    grid-column: 2;
+    grid-row: 3;
+    margin: 0 0 12px;
+    font-size: 7px;
+    align-self: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .balance-detail {
+    grid-column: span 2;
+    margin: 8px 0;
+    font-size: 13px;
+  }
+  .balance-link {
+    grid-column: span 2;
+    font-size: 13px;
+    padding-bottom: 0;
+    margin-top: 15px;
+  }
+  .stats-strip {
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    margin: 18px 0 22px;
+    border-radius: 13px;
+  }
+  .stats-strip > div {
+    padding: 18px 20px;
+    gap: 13px;
+  }
+  .stats-strip > div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--line);
+  }
+  .stats-strip > div:nth-child(2) {
+    border-right: 0;
+  }
+  .stat-icon {
+    display: flex;
+  }
+  .stats-strip strong {
+    font-size: 20px;
+    margin-top: 6px;
+  }
+  .stats-strip div > div > span {
+    font-size: 13px;
+  }
+  .stats-strip > div > span svg {
+    width: 17px;
+  }
+  .section-head h2 {
+    font-size: 17px;
+  }
+  .section-head .text-link {
+    font-size: 13px;
+  }
+  .application-surface {
+    padding: 21px 20px 4px;
+  }
+  .application-row {
+    flex-wrap: wrap;
+    gap: 9px;
+    padding: 18px 0;
+  }
+  .application-icon {
+    width: 33px !important;
+    height: 35px;
+  }
+  .application-row .badge {
+    margin-left: 42px;
+    order: 6;
+    font-size: 13px;
+  }
+  .application-name b {
+    font-size: 13px;
+  }
+  .application-name > span {
+    font-size: 13px;
+  }
+  .application-row-amount {
+    margin-left: auto;
+  }
+  .application-row-amount b {
+    font-size: 13px;
+  }
+  .application-row-amount > span {
+    font-size: 13px;
+  }
+  .application-row > svg {
+    margin-left: 0;
+  }
+  .next-action h3 {
+    font-size: 17px;
+  }
+  .next-action p {
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 100%;
+  }
+  .next-action {
+    padding: 22px 20px;
+  }
+  .action-banner {
+    flex-wrap: wrap;
+    gap: 11px;
+    padding: 17px;
+  }
+  .action-banner > div {
+    min-width: 70%;
+  }
+  .action-banner .button {
+    margin-left: 45px;
+  }
+  .feed-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .news-section .feed-card:last-child {
+    display: flex;
+  }
+  .feed-card {
+    padding: 22px;
+  }
+  .feed-card h3 {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .feed-card > p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .feed-meta {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .feed-card .text-link {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .why {
+    font-size: 13px;
+  }
+  .why p {
+    font-size: 13px;
+  }
+  .workspace-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 22px 0;
+    margin-top: 30px;
+    font-size: 13px;
+  }
+  .data-note {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .list-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+    margin: 19px 0 22px;
+  }
+  .tabs {
+    gap: 20px;
+    width: 100%;
+  }
+  .tabs button {
+    font-size: 13px;
+  }
+  .small-search {
+    width: 100%;
+  }
+  .small-search input {
+    max-width: none;
+    flex: 1;
+    font-size: 13px;
+    padding: 12px 0;
+  }
+  .application-card {
+    padding: 21px;
+  }
+  .application-card-head {
+    gap: 8px;
+  }
+  .application-card-head > span:nth-child(2) {
+    font-size: 13px;
+  }
+  .application-card-head .badge {
+    font-size: 8px;
+  }
+  .application-card-head > .icon-tile {
+    width: 29px;
+    height: 31px;
+  }
+  .application-card-head > svg {
+    width: 14px;
+  }
+  .application-card h2 {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+  .application-figures {
+    grid-template-columns: 1.3fr 0.8fr 0.8fr;
+    gap: 8px;
+  }
+  .application-figures span {
+    font-size: 8px;
+  }
+  .application-figures strong {
+    font-size: 20px;
+  }
+  .application-figures .small-figure {
+    font-size: 14px;
+  }
+  .route-track li {
+    font-size: 13px;
+  }
+  .application-next {
+    font-size: 13px;
+  }
+  .product-intro {
+    padding: 24px;
+  }
+  .product-intro-copy {
+    display: block;
+  }
+  .product-intro-copy .icon-tile {
+    margin: 0 0 18px;
+  }
+  .product-intro h2 {
+    font-size: 25px;
+  }
+  .product-intro p {
+    font-size: 13px;
+  }
+  .product-card {
+    display: flex;
+    padding: 27px;
+  }
+  .product-card-top {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .product-card h2 {
+    font-size: 24px;
+  }
+  .product-card > p {
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+  .product-terms {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .product-terms > div {
+    font-size: 13px;
+    padding: 14px 0;
+  }
+  .product-purposes {
+    margin: 0 0 24px;
+  }
+  .product-purposes > span {
+    font-size: 13px;
+  }
+  .product-card > .button {
+    margin-top: 0;
+  }
+  .help-strip {
+    flex-wrap: wrap;
+    padding: 19px;
+    gap: 12px;
+  }
+  .help-strip p {
+    font-size: 13px;
+    min-width: 80%;
+  }
+  .help-strip > .text-link {
+    margin-left: 32px;
+  }
+  .wizard {
+    padding: 23px;
+  }
+  .wizard-steps {
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+  .wizard-steps li {
+    font-size: 13px;
+    gap: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 15px;
+  }
+  .wizard-steps li > span {
+    width: 23px;
+    height: 23px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .form-section h2 {
+    font-size: 22px;
+  }
+  .form-section > p {
+    font-size: 13px;
+  }
+  .form-section label {
+    font-size: 13px;
+  }
+  .form-section input,
+  .form-section select {
+    font-size: 14px;
+  }
+  .form-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+    padding-top: 20px;
+  }
+  .form-actions > .button {
+    font-size: 13px;
+    min-width: 0;
+    white-space: normal;
+    min-height: 43px;
+  }
+  .form-actions > .button:last-child {
+    flex: 1;
+  }
+  .company-summary {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .company-summary .badge {
+    margin-left: 33px;
+  }
+  .review-grid {
+    gap: 20px 13px;
+  }
+  .review-grid dt {
+    font-size: 13px;
+  }
+  .review-grid dd {
+    font-size: 13px;
+  }
+  .checkbox-label {
+    font-size: 13px;
+  }
+  .detail-route {
+    padding: 13px 16px 19px;
+  }
+  .detail-route .route-track li {
+    font-size: 8px;
+  }
+  .detail-next {
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 22px;
+  }
+  .detail-next b {
+    font-size: 13px;
+  }
+  .detail-next p {
+    font-size: 13px;
+  }
+  .detail-next .icon-tile {
+    width: 31px;
+    height: 33px;
+    border-radius: 9px;
+  }
+  .detail-next .icon-tile svg {
+    width: 17px;
+  }
+  .detail-section,
+  .bank-decision,
+  .decision-card {
+    padding: 22px;
+  }
+  .detail-amounts {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+  }
+  .detail-amounts > div:last-child {
+    grid-column: span 2;
+  }
+  .detail-amounts strong {
+    font-size: 25px;
+  }
+  .detail-amounts > div:last-child strong {
+    font-size: 20px;
+  }
+  .detail-amounts span {
+    font-size: 13px;
+  }
+  .detail-data > div {
+    font-size: 13px;
+    gap: 20px;
+  }
+  .detail-aside {
+    grid-template-columns: 1fr;
+  }
+  .context-help {
+    grid-column: 1;
+  }
+  .document-request {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .document-request > div:not(.document-add) {
+    min-width: 70%;
+  }
+  .document-request > div.document-add {
+    margin-left: 32px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  .document-add .button {
+    font-size: 13px;
+  }
+  .document-request > .icon-button,
+  .document-request > .badge {
+    margin-left: 32px;
+  }
+  .document-row {
+    gap: 10px;
+  }
+  .document-row b {
+    font-size: 13px;
+  }
+  .document-row div > span {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .document-row > .icon-tile {
+    width: 29px;
+    height: 32px;
+  }
+  .document-with-link {
+    gap: 12px;
+  }
+  .document-with-link > .text-link {
+    font-size: 13px;
+  }
+  .offer-grid {
+    padding: 16px;
+    gap: 18px 14px;
+  }
+  .offer-grid b {
+    font-size: 15px;
+  }
+  .offer-grid span {
+    font-size: 13px;
+  }
+  .reason-list li {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+  .decision-card .section-head {
+    flex-wrap: wrap;
+  }
+  .decision-card .section-head h2 {
+    font-size: 18px;
+  }
+  .decision-card > .button {
+    width: 100%;
+    font-size: 13px;
+  }
+  .signing-card {
+    padding: 24px;
+  }
+  .signing-card h2 {
+    font-size: 23px;
+  }
+  .signing-card .button {
+    font-size: 13px;
+    white-space: normal;
+  }
+  .passport,
+  .checks-panel {
+    padding: 24px;
+  }
+  .passport h2 {
+    font-size: 22px;
+  }
+  .passport > p {
+    font-size: 13px;
+  }
+  .score-factors > div > div {
+    font-size: 13px;
+  }
+  .score-factors p {
+    font-size: 13px;
+  }
+  .passport > small {
+    font-size: 13px;
+  }
+  .checks-panel h3 {
+    font-size: 17px;
+  }
+  .checks-panel details summary {
+    font-size: 13px;
+  }
+  .checks-panel details p {
+    font-size: 13px;
+  }
+  .timeline b {
+    font-size: 13px;
+  }
+  .timeline p {
+    font-size: 13px;
+  }
+  .timeline small {
+    font-size: 13px;
+  }
+  .simulator-controls {
+    padding: 22px;
+  }
+  .simulator-controls .section-head h2 {
+    font-size: 19px;
+    max-width: 220px;
+  }
+  .simulator-controls .icon-tile {
+    width: 33px;
+    height: 35px;
+    border-radius: 9px;
+  }
+  .range-title {
+    gap: 12px;
+  }
+  .range-title > label {
+    font-size: 13px;
+    max-width: 115px;
+  }
+  .range-value input {
+    font-size: 22px;
+    width: 127px;
+  }
+  .range-value > span {
+    font-size: 14px;
+  }
+  .range-field {
+    margin-bottom: 20px;
+  }
+  .stress-test {
+    padding: 16px;
+  }
+  .stress-test h3 {
+    font-size: 14px;
+  }
+  .stress-options > button {
+    font-size: 13px;
+    padding: 9px 6px;
+  }
+  .scenario-result {
+    display: block;
+    padding: 27px 24px;
+  }
+  .result-heading {
+    font-size: 13px;
+  }
+  .result-heading > span:last-child {
+    font-size: 13px;
+  }
+  .payment-number {
+    font-size: 43px;
+  }
+  .cash-gauge {
+    margin: 18px auto 20px;
+    max-width: 240px;
+  }
+  .result-breakdown > div {
+    font-size: 13px;
+    margin: 17px 0;
+  }
+  .affordability b {
+    font-size: 13px;
+  }
+  .affordability p {
+    font-size: 13px;
+  }
+  .scenario-result > .button {
+    font-size: 13px;
+    white-space: normal;
+  }
+  .result-note {
+    font-size: 13px;
+  }
+  .compare-scenario {
+    padding: 20px;
+  }
+  .compare-scenario h3 {
+    font-size: 17px;
+  }
+  .compare-scenario p {
+    font-size: 13px;
+  }
+  .compare-scenario > .button {
+    margin-left: 0;
+    width: 100%;
+    font-size: 13px;
+  }
+  .schedule-section {
+    padding: 22px 18px;
+  }
+  .schedule-section .section-head {
+    flex-wrap: wrap;
+  }
+  .schedule-section .section-head h2 {
+    font-size: 17px;
+  }
+  .schedule-section .section-head > .text-button {
+    font-size: 13px;
+  }
+  .calculation-details p {
+    font-size: 13px;
+  }
+  .bank-overview {
+    gap: 10px;
+  }
+  .bank-overview > div {
+    padding: 14px;
+    gap: 13px;
+  }
+  .bank-overview > div > span:last-child {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .bank-overview strong {
+    font-size: 24px;
+  }
+  .bank-overview .icon-tile {
+    width: 30px;
+    height: 32px;
+    border-radius: 9px;
+  }
+  .bank-overview .icon-tile svg {
+    width: 18px;
+  }
+  .bank-queue th {
+    font-size: 13px;
+  }
+  .bank-queue td {
+    padding: 17px 13px;
+  }
+  .recommended-decision {
+    padding: 16px;
+  }
+  .recommended-decision ul {
+    font-size: 13px;
+  }
+  .bank-decision .button {
+    font-size: 13px;
+    white-space: normal;
+    min-height: 44px;
+  }
+  .document-banner,
+  .feed-explanation {
+    padding: 23px;
+    gap: 15px;
+  }
+  .document-banner > div,
+  .feed-explanation > div {
+    min-width: 100%;
+    flex: initial;
+  }
+  .document-banner h2,
+  .feed-explanation h2 {
+    font-size: 22px;
+  }
+  .document-banner p,
+  .feed-explanation p {
+    font-size: 13px;
+  }
+  .document-banner > .button,
+  .feed-explanation > .badge {
+    margin-left: 0;
+  }
+  .documents-list {
+    padding: 4px 17px;
+  }
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+  .settings-section {
+    padding: 26px;
+  }
+  .settings-section h2 {
+    font-size: 22px;
+  }
+  .profile-summary h3 {
+    font-size: 17px;
+  }
+  .profile-summary p {
+    font-size: 13px;
+  }
+  .profile-summary .avatar {
+    width: 55px;
+    height: 55px;
+  }
+  .settings-grid .detail-data > div {
+    font-size: 13px;
+  }
+  .settings-section > .small {
+    font-size: 13px;
+  }
+  .theme-option {
+    padding: 11px;
+  }
+  .theme-option > span:last-child {
+    font-size: 13px;
+  }
+  .theme-preview {
+    height: 92px;
+  }
+  .accent-option {
+    font-size: 13px;
+    padding: 10px 13px;
+  }
+  .switch-row b {
+    font-size: 13px;
+  }
+  .switch-row small {
+    font-size: 13px;
+  }
+  .settings-section .section-description {
+    font-size: 13px;
+  }
+  .interest-option {
+    font-size: 13px;
+  }
+  .settings-section > .text-link {
+    font-size: 13px;
+  }
+  .integration-card {
+    padding: 25px;
+  }
+  .integration-card h2 {
+    font-size: 22px;
+  }
+  .integration-card p {
+    font-size: 13px;
+  }
+  .integration-card .button {
+    font-size: 13px;
+  }
+  .integration-tip {
+    padding: 17px 5px;
+    gap: 13px;
+  }
+  .integration-tip h3 {
+    font-size: 16px;
+  }
+  .integration-tip p {
+    font-size: 13px;
+  }
+  .api-hero {
+    padding: 25px;
+    gap: 18px;
+  }
+  .api-hero > div {
+    min-width: 100%;
+  }
+  .api-hero h2 {
+    font-size: 24px;
+  }
+  .api-hero p {
+    font-size: 13px;
+  }
+  .api-hero > .button {
+    margin: 0;
+    font-size: 13px;
+  }
+  .token-row {
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+  .token-row > div {
+    min-width: 70%;
+  }
+  .token-row > .button {
+    margin-left: 33px;
+  }
+  .audit-list {
+    padding: 24px;
+  }
+  .audit-row {
+    gap: 12px;
+  }
+  .audit-row .icon-tile {
+    width: 30px;
+    height: 33px;
+    border-radius: 9px;
+  }
+  .legal-nav button {
+    font-size: 13px;
+  }
+  .legal-content {
+    padding: 25px;
+  }
+  .legal-content h2 {
+    font-size: 25px;
+  }
+  .legal-content > p {
+    font-size: 13px;
+  }
+  .legal-version {
+    font-size: 13px;
+  }
+  .modal {
+    padding: 22px;
+    max-height: calc(100dvh - 32px);
+  }
+  .modal-head h2 {
+    font-size: 19px;
+  }
+  .toast {
+    bottom: 18px;
+    font-size: 13px;
+    width: max-content;
+    max-width: calc(100% - 30px);
+  }
+  .login-story {
+    padding: 27px;
+  }
+  .login-story-content {
+    padding-top: 35px;
+  }
+  .login-story h1 {
+    font-size: 39px;
+    letter-spacing: -1.7px;
+  }
+  .login-form {
+    padding: 33px 25px;
+  }
+  .login-story .brand small {
+    font-size: 13px;
+  }
+  .login-story .brand > span:last-child {
+    font-size: 16px;
+  }
+  .login-form h2 {
+    font-size: 27px;
+  }
+  .demo-account {
+    padding: 17px 14px;
+    gap: 12px;
+  }
+  .demo-account b {
+    font-size: 13px;
+  }
+  .demo-account small {
+    font-size: 13px;
+  }
+  .demo-label {
+    font-size: 13px;
+  }
+  .login-tag {
+    font-size: 13px;
+  }
+  .segmented button {
+    font-size: 13px;
+    gap: 6px;
+  }
+}
+@media (max-width: 370px) {
+  .workspace {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .topbar {
+    padding: 0 12px;
+  }
+  .environment-pill {
+    display: none;
+  }
+  .page-head h1 {
+    font-size: 24px;
+  }
+  .route-hero {
+    padding: 22px 18px;
+  }
+  .hero-content h2 {
+    font-size: 24px;
+  }
+  .hero-action {
+    gap: 12px;
+  }
+  .hero-amount {
+    font-size: 14px;
+  }
+  .route-emblem {
+    opacity: 0.2;
+  }
+  .business-balance {
+    padding: 18px;
+    gap: 0 15px;
+  }
+  .business-balance > strong {
+    font-size: 24px;
+  }
+  .stats-strip > div {
+    padding: 17px 14px;
+    gap: 9px;
+  }
+  .stats-strip strong {
+    font-size: 18px;
+  }
+  .stat-icon svg {
+    width: 14px;
+  }
+  .application-card {
+    padding: 18px;
+  }
+  .application-card-head > svg {
+    display: none;
+  }
+  .application-card-head .badge {
+    font-size: 7px;
+  }
+  .application-card-head > span:nth-child(2) {
+    font-size: 8px;
+  }
+  .application-figures strong {
+    font-size: 18px;
+  }
+  .application-figures span {
+    font-size: 7px;
+  }
+  .application-row-amount b {
+    font-size: 13px;
+  }
+  .application-name b {
+    font-size: 13px;
+  }
+  .application-row .badge {
+    font-size: 8px;
+  }
+  .hero-number {
+    font-size: 7px;
+  }
+  .wizard {
+    padding: 20px;
+  }
+  .wizard-steps li {
+    font-size: 8px;
+  }
+  .range-title {
+    flex-wrap: wrap;
+  }
+  .range-title > label {
+    max-width: none;
+  }
+  .range-value input {
+    width: 120px;
+  }
+  .stress-options {
+    flex-wrap: wrap;
+  }
+  .stress-options > button {
+    min-width: 40%;
+  }
+  .payment-number {
+    font-size: 38px;
+  }
+  .bank-overview {
+    gap: 7px;
+  }
+  .bank-overview > div {
+    padding: 12px 10px;
+  }
+  .bank-overview > div > span:last-child {
+    font-size: 8px;
+  }
+  .integration-tabs {
+    gap: 14px;
+  }
+  .integration-tabs button {
+    font-size: 13px;
+  }
+  .login-form {
+    padding: 30px 20px;
+  }
+  .login-story {
+    padding: 25px;
+  }
+  .login-story h1 {
+    font-size: 35px;
+  }
+  .segmented button {
+    font-size: 13px;
+  }
+  .segmented svg {
+    width: 15px;
+  }
+  .demo-account {
+    padding: 15px 12px;
+    gap: 10px;
+  }
+  .demo-account small {
+    font-size: 13px;
+  }
+  .demo-account b {
+    font-size: 13px;
+  }
+}
+@media (max-height: 800px) and (min-width: 801px) {
+  .demo-aside {
+    display: none;
+  }
+  .sidebar-bottom {
+    padding-top: 15px;
+  }
+  .organization-switch {
+    margin: 25px 0 19px;
+  }
+  .sidebar-user {
+    padding: 15px 0;
+  }
+  .help-link {
+    margin: 0 0 8px;
+  }
+  .nav-item {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    min-height: 40px;
+  }
+  .nav-divider {
+    margin: 10px;
+  }
+}
+@media print {
+  .sidebar,
+  .topbar,
+  .workspace-footer,
+  .button,
+  .toast,
+  .nav-backdrop {
+    display: none !important;
+  }
+  .main-shell {
+    margin: 0;
+  }
+  .workspace {
+    padding: 0;
+    max-width: none;
+  }
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .surface {
+    break-inside: avoid;
+    border-color: #bbb;
+  }
+  .route-hero {
+    color: #222;
+    background: white;
+    border: 1px solid #ccc;
+  }
+  .route-emblem {
+    display: none;
+  }
+}

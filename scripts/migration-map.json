@@ -1,0 +1,26 @@
+[
+  {
+    "local": "0001_initial.sql",
+    "cloud": "0000_initial.sql"
+  },
+  {
+    "cloud": "0001_administration.sql",
+    "local": "0002_administration.sql"
+  },
+  {
+    "cloud": "0002_business_profiles.sql",
+    "local": "0003_business_profiles.sql"
+  },
+  {
+    "cloud": "0003_audit_context.sql",
+    "local": "0004_audit_context.sql"
+  },
+  {
+    "cloud": "0004_statement_reports.sql",
+    "local": "0005_statement_reports.sql"
+  },
+  {
+    "cloud": "0005_loan_servicing.sql",
+    "local": "0006_loan_servicing.sql"
+  }
+]

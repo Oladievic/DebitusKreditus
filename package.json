@@ -1,0 +1,59 @@
+{
+  "name": "debitus-kreditus",
+  "version": "0.8.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env scripts/dev.mjs",
+    "dev:cloud": "vite --mode cloud --host 127.0.0.1",
+    "build": "node scripts/build.mjs --cloud",
+    "build:local": "node scripts/build.mjs --local",
+    "build:cloud": "node scripts/build.mjs --cloud",
+    "start": "node --env-file-if-exists=.env dist/local/index.js",
+    "preview:cloud": "vite preview --mode cloud --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:e2e": "playwright test",
+    "test:cloud": "node scripts/smoke-cloud.mjs",
+    "db:generate": "drizzle-kit generate --custom --config scripts/drizzle.config.ts",
+    "db:migrate:cloud:local": "node scripts/migrate-d1-local.mjs",
+    "validate:artifact": "node scripts/validate-artifact.mjs",
+    "bundle:offline": "node scripts/build-portable.mjs",
+    "test:offline": "node scripts/test-portable.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/geologica": "5.3.0",
+    "@fontsource-variable/golos-text": "5.3.0",
+    "@hono/node-server": "2.1.5",
+    "@tesseract.js-data/eng": "1.0.0",
+    "@tesseract.js-data/rus": "1.0.0",
+    "hono": "4.13.13",
+    "pdfjs-dist": "6.4.299",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router-dom": "7.18.4",
+    "tesseract.js": "7.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.64.0",
+    "@cloudflare/workers-types": "5.20261019.1",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "drizzle-kit": "0.31.11",
+    "drizzle-orm": "0.45.4",
+    "esbuild": "0.28.2",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vite": "8.3.4",
+    "wrangler": "4.151.2"
+  }
+}

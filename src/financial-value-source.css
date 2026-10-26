@@ -1,0 +1,47 @@
+.financial-value-source {
+  max-width: 100%;
+  min-width: 0;
+}
+.financial-value-source > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-block: 3px;
+  text-decoration: underline dotted;
+  text-underline-offset: 5px;
+}
+.financial-value-source > summary::-webkit-details-marker {
+  display: none;
+}
+.financial-value-source > summary > span {
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  width: 17px;
+  height: 17px;
+  font-size: 11px;
+  border-radius: 50%;
+  align-self: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.financial-value-source > div {
+  margin-top: 10px;
+  background: var(--canvas);
+  border-radius: 10px;
+  padding: 13px 15px;
+  text-align: left;
+  font-weight: 400;
+  max-width: 54ch;
+}
+.financial-value-source > div b {
+  font-size: 13px;
+}
+.financial-value-source > div p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 8px 0 0;
+}

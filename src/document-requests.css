@@ -1,0 +1,72 @@
+.document-request-summary {
+  border-radius: 14px;
+  background: var(--info-soft);
+  padding: 18px;
+  line-height: 1.6;
+  margin-block: 18px;
+}
+.document-request-summary p {
+  margin: 8px 0;
+}
+.document-request-summary > span {
+  font-weight: 600;
+}
+.document-request-category {
+  align-items: flex-start;
+}
+.document-request-category > .document-status {
+  margin-top: 3px;
+}
+.document-request.document-request-category > div.document-add {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 190px;
+}
+.document-request-category .upload-button {
+  width: auto;
+  min-height: 42px;
+  height: auto;
+  padding: 7px 10px;
+  gap: 7px;
+  font-size: 13px;
+}
+.document-file-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 16px;
+}
+.document-category-file {
+  min-width: 0;
+}
+.document-category-file a {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  line-height: 1.5;
+}
+.document-category-file a svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.document-request-category .document-category-file a span {
+  color: inherit;
+  font-size: 15px;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.document-category-file small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 680px) {
+  .document-request.document-request-category > div.document-add {
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+}

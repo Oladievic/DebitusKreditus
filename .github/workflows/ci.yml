@@ -1,0 +1,143 @@
+name: Verify Debitus-Kreditus
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Node ${{ matrix.node }} and Worker
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      matrix:
+        node: ['24.19.0']
+    env:
+      CI: 'true'
+      WRANGLER_SEND_METRICS: 'false'
+      CLOUDFLARE_CF_FETCH_ENABLED: 'false'
+    steps:
+      - name: Checkout 7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Setup Node 7.1.0
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install locked dependencies
+        run: |
+          npm install --global pnpm@11.25.0
+          pnpm install --frozen-lockfile
+      - name: Types and server tests
+        run: |
+          pnpm typecheck
+          pnpm test
+      - name: Build Node and Worker
+        run: |
+          pnpm build:local
+          pnpm build:cloud
+          pnpm validate:artifact
+      - name: Local Worker and D1 journey
+        shell: bash
+        run: |
+          mkdir -p output/ci
+          pnpm db:migrate:cloud:local
+          pnpm preview:cloud > output/ci/worker.log 2>&1 &
+          preview_pid=$!
+          trap 'kill "$preview_pid" 2>/dev/null || true' EXIT
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --max-time 2 http://127.0.0.1:4173/api/health > /dev/null; then
+              ready=true
+              break
+            fi
+            sleep 2
+          done
+          test "$ready" = true
+          pnpm test:cloud
+      - name: Install browser
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Browser scenarios
+        run: pnpm test:e2e
+      - name: Save verification diagnostics 7.0.2
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: verification-diagnostics
+          path: |
+            output/ci/
+            output/playwright/
+          retention-days: 7
+          if-no-files-found: ignore
+
+  docker:
+    name: Docker Compose journey and persistence
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      CI: 'true'
+      COMPOSE_PROJECT_NAME: debitus-ci-${{ github.run_id }}-${{ github.run_attempt }}
+      LOCAL_WORKER_URL: http://127.0.0.1:3000
+    steps:
+      - name: Checkout 7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Setup Node 7.1.0
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24.19.0'
+      - name: Build and start isolated container
+        run: docker compose up --build -d
+      - name: Wait for health and verify journey
+        shell: bash
+        run: |
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --max-time 2 http://127.0.0.1:3000/api/health > /dev/null; then
+              ready=true
+              break
+            fi
+            sleep 2
+          done
+          test "$ready" = true
+          node scripts/smoke-cloud.mjs
+      - name: Save a separate synthetic persistence fixture
+        run: node scripts/check-persistence.mjs before
+      - name: Restart the same container with its existing volume
+        run: docker compose restart cabinet
+      - name: Verify persistence after restart
+        shell: bash
+        run: |
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --max-time 2 http://127.0.0.1:3000/api/health > /dev/null; then
+              ready=true
+              break
+            fi
+            sleep 2
+          done
+          test "$ready" = true
+          node scripts/check-persistence.mjs after
+      - name: Collect container logs
+        if: always()
+        run: |
+          mkdir -p output/ci
+          docker compose logs --no-color > output/ci/docker.log 2>&1
+          docker compose ps --all > output/ci/docker-status.txt
+      - name: Save container diagnostics 7.0.2
+        if: failure()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: docker-diagnostics
+          path: output/ci/
+          retention-days: 7
+          if-no-files-found: ignore
+      - name: Remove disposable CI container and synthetic volume
+        if: always()
+        run: docker compose down --volumes --remove-orphans

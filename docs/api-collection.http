@@ -1,0 +1,259 @@
+@base = http://localhost:3000/api
+@applicationId = app_sever_working
+@version = 1
+@previewId = replace-with-preview-id
+@token = replace-with-personal-token
+
+### Состояние сервиса
+GET {{base}}/health
+
+### Демо-аккаунты
+GET {{base}}/auth/demo-accounts
+
+### Вход клиента; REST-клиент должен сохранять cookie
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{"email":"owner@sever.example.test","password":"Demo2026!"}
+
+### Текущий пользователь
+GET {{base}}/auth/me
+
+### Продукты
+GET {{base}}/products
+
+### Сумма от комфортного платежа и ежемесячного резерва
+POST {{base}}/scenario/affordability
+Content-Type: application/json
+
+{"productId":"working_capital","termMonths":24,"comfortablePayment":100000,"monthlyReserve":300000,"financials":{"monthlyRevenue":2400000,"monthlyExpenses":1650000,"monthlyDebtPayment":120000}}
+
+### Карточка; используйте application.version для следующего запроса
+GET {{base}}/applications/{{applicationId}}
+
+### Новая заявка
+POST {{base}}/applications
+Content-Type: application/json
+
+{"productId":"working_capital","amount":1200000,"termMonths":24,"purpose":"Закупка материалов под контракт","financials":{"monthlyRevenue":2400000,"monthlyExpenses":1650000,"monthlyDebtPayment":120000},"consent":true}
+
+### Синтетическая выписка; после добавления перечитайте version
+POST {{base}}/applications/{{applicationId}}/documents/sample
+Content-Type: application/json
+
+{"category":"statement"}
+
+### Синтетическая отчётность; после добавления перечитайте version
+POST {{base}}/applications/{{applicationId}}/documents/sample
+Content-Type: application/json
+
+{"category":"financials"}
+
+### Отправка; обновите @version по GET карточки
+POST {{base}}/applications/{{applicationId}}/actions/submit
+Content-Type: application/json
+
+{"version":{{version}}}
+
+### Вход сотрудника банка заменит текущую сессию
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{"email":"bank@debitus.example.test","password":"Demo2026!"}
+
+### Очередь
+GET {{base}}/bank/queue
+
+### Начать рассмотрение; обновите @version
+POST {{base}}/bank/applications/{{applicationId}}/review
+Content-Type: application/json
+
+{"version":{{version}}}
+
+### Принять рекомендуемое политикой решение; обновите @version
+POST {{base}}/bank/applications/{{applicationId}}/decision
+Content-Type: application/json
+
+{"version":{{version}}}
+
+### Снова войдите клиентом для следующих действий
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{"email":"owner@sever.example.test","password":"Demo2026!"}
+
+### Принять условия; обновите @version по карточке
+POST {{base}}/applications/{{applicationId}}/actions/accept-offer
+Content-Type: application/json
+
+{"version":{{version}}}
+
+### Подписание — только симуляция; обновите @version
+POST {{base}}/applications/{{applicationId}}/actions/sign
+Content-Type: application/json
+
+{"version":{{version}},"confirmed":true}
+
+### Выдача — только симуляция; обновите @version
+POST {{base}}/applications/{{applicationId}}/actions/fund
+Content-Type: application/json
+
+{"version":{{version}},"confirmed":true}
+
+### Детерминированный сценарий
+POST {{base}}/scenario
+Content-Type: application/json
+
+{"productId":"working_capital","amount":1200000,"termMonths":24,"financials":{"monthlyRevenue":2400000,"monthlyExpenses":1650000,"monthlyDebtPayment":120000}}
+
+### Проверка импорта без записи заявок
+POST {{base}}/import/validate
+Content-Type: application/json
+
+{"applications":[{"productId":"working_capital","amount":1000000,"termMonths":24,"purpose":"Импортированный черновик","financials":{"monthlyRevenue":2400000,"monthlyExpenses":1650000,"monthlyDebtPayment":120000},"consent":true}]}
+
+### Применение preview
+POST {{base}}/import/apply
+Content-Type: application/json
+
+{"previewId":"{{previewId}}"}
+
+### Персональная лента
+GET {{base}}/feed
+
+### Интересы меняют состав ленты
+PATCH {{base}}/preferences
+Content-Type: application/json
+
+{"interests":["growth"],"theme":"light","accent":"red"}
+
+### JSON-экспорт
+GET {{base}}/export?format=json
+
+### CSV-экспорт
+GET {{base}}/export?format=csv
+
+### Готовность необязательной локальной модели
+GET {{base}}/local-ai/status
+
+### Объяснение доступной заявки; версия должна совпадать с текущей
+POST {{base}}/local-ai/explain
+Content-Type: application/json
+
+{"applicationId":"{{applicationId}}","version":{{version}},"topic":"payment"}
+
+### Создание ограниченного агентского токена
+POST {{base}}/integrations/tokens
+Content-Type: application/json
+
+{"name":"Локальный тестовый агент"}
+
+### MCP: согласование версии
+POST {{base}}/mcp
+Content-Type: application/json
+Accept: application/json, text/event-stream
+Authorization: Bearer {{token}}
+
+{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"manual-check","version":"1"}}}
+
+### MCP: подтверждение инициализации — 202 без тела
+POST {{base}}/mcp
+Content-Type: application/json
+Accept: application/json, text/event-stream
+MCP-Protocol-Version: 2025-11-25
+Authorization: Bearer {{token}}
+
+{"jsonrpc":"2.0","method":"notifications/initialized"}
+
+### MCP: четыре инструмента только чтения
+POST {{base}}/mcp
+Content-Type: application/json
+Accept: application/json, text/event-stream
+MCP-Protocol-Version: 2025-11-25
+Authorization: Bearer {{token}}
+
+{"jsonrpc":"2.0","id":2,"method":"tools/list"}
+
+### Чтение через агента
+POST {{base}}/mcp
+Content-Type: application/json
+Accept: application/json, text/event-stream
+MCP-Protocol-Version: 2025-11-25
+Authorization: Bearer {{token}}
+
+{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"list_applications","arguments":{}}}
+
+### Персональный подбор по собственному сохранённому профилю
+POST {{base}}/mcp
+Content-Type: application/json
+Accept: application/json, text/event-stream
+MCP-Protocol-Version: 2025-11-25
+Authorization: Bearer {{token}}
+
+{"jsonrpc":"2.0","id":4,"method":"tools/call","params":{"name":"recommend_products","arguments":{}}}
+
+### Выход
+POST {{base}}/auth/logout
+
+### Вход администратора платформы
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{"email":"admin@debitus.example.test","password":"Demo2026!"}
+
+### Состояние платформы
+GET {{base}}/admin/overview
+
+### Продукты и текущие версии правил приёма
+GET {{base}}/admin/products
+
+### Реестр без доступа к досье и банковским решениям
+GET {{base}}/admin/registry
+
+### Журнал платформы
+GET {{base}}/admin/audit
+
+### Выгрузка реестра
+GET {{base}}/admin/export?format=csv
+
+### Выход администратора
+POST {{base}}/auth/logout
+
+### V9: после входа владельца — план действий своей заявки
+GET {{base}}/applications/{{applicationId}}/action-plan
+
+### Варианты того же продукта: расчёт не меняет исходную заявку
+GET {{base}}/applications/{{applicationId}}/alternatives
+
+### После входа банка — сравнение доступного отправленного пакета
+GET {{base}}/bank/applications/{{applicationId}}/changes
+
+### Сопровождение после funded; GET не создаёт запись
+GET {{base}}/applications/{{applicationId}}/servicing
+
+### Имитация следующего платежа: заменить version и уникальный ключ
+POST {{base}}/applications/{{applicationId}}/servicing/payment
+Content-Type: application/json
+
+{"version":0,"idempotencyKey":"example-payment-0001","confirmed":true}
+
+### После отмеченного платежа — предпросмотр без записи
+POST {{base}}/applications/{{applicationId}}/servicing/prepayment/preview
+Content-Type: application/json
+
+{"version":1,"amount":100000,"mode":"reduce_payment"}
+
+### Подтверждение имитации с теми же проверенными параметрами
+POST {{base}}/applications/{{applicationId}}/servicing/prepayment
+Content-Type: application/json
+
+{"version":1,"amount":100000,"mode":"reduce_payment","idempotencyKey":"example-prepayment-0001","confirmed":true}
+
+### План действий через read-only MCP
+POST {{base}}/mcp
+Content-Type: application/json
+Accept: application/json, text/event-stream
+MCP-Protocol-Version: 2025-11-25
+Authorization: Bearer {{token}}
+
+{"jsonrpc":"2.0","id":5,"method":"tools/call","params":{"name":"get_application_action_plan","arguments":{"applicationId":"{{applicationId}}"}}}

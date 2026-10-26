@@ -1,0 +1,10 @@
+node_modules
+dist
+.cache
+.wrangler
+data
+output
+pnpm-lock.yaml
+docs/api-openapi.json
+
+scripts/sites-vite-plugin.ts
